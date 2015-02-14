@@ -1,0 +1,22 @@
+1.
+change directory :
+
+import os
+os.getcwd()
+os.chdir(os.path.join(os.getenv('userprofile'),
+'Desktop'))
+
+alternatively, type following:
+os.chdir('c:\\users\\prosserc\\desktop')
+
+or use a raw string:
+os.chdir(r'c:\users\prosserc\desktop')
+
+2.
+The methods and operators that lists share with other sequences (like strings) are documented at 
+
+http://docs.python.org/2/library/stdtypes.html#typesseq. 
+
+The methods and operators that only apply to mutable sequences are documented at 
+
+http://docs.python.org/2/library/stdtypes.html#typesseq-mutable.

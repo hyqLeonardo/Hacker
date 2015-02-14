@@ -1,0 +1,160 @@
+GLM
+**.glm <- glm(y ~ x, family=poisson, data=**)
+
+------********************************--------
+Date and Time in R
+
+d1 <- Sys.Date() : current date, if type
+unclass(Sys.Date()), then shows number of days
+since 1970-01-01
+
+weekdays(d1) : show week
+months(t1) : show month
+quarters(d1) : show current quarter
+
+as.Date("YEAR-MONTH-DAY")
+
+t1 <- Sys.time() : current date and time, it's class
+is "POSIXct" "POSIXt", unclass this will show
+number of seconds since 1970
+
+t <- as.POSIXlt(Sys.time()) 
+str(t)
+t$min   or whatever info want to extract
+
+t3 <- "October 17, 1986 08:24"
+strptime(t3, "%B %d, %Y %H:%M") will convert t3
+to class "POSIXlt"
+
+difftime(Sys.time(), t1, units = "days")
+
+lubridate package
+
+
+------********************************--------
+Q:
+After library(moments), 
+moments(x, order = 2, T) is NOT the same as     var(x), but is the same as 
+for (i in 1:length(x))
+{ a[i] <- (x[i]-mean(x))^2 }
+sum(a)/length(x)
+Why ? ? Due to accuracy ?
+A:
+Not a problem of accuracy !
+var(x) is computed by divide sum(a) by 
+(length(x) - 1) !
+
+    
+
+------********************************--------
+library(e1071) : kurtosis
+
+library(moments) : agostino.test()
+
+library(memisc) : 
+as.data.set(spss.system.file("file-name")
+
+library(lpSolve)
+library(lpSolveAPI) : 
+http://lpsolve.sourceforge.net/5.5/R.html
+same function as slover in MF Excel
+
+library(pracma) : rref()
+
+library(RODBC) : Access to multiple data base (page 40)
+
+library(sqldf) : SQL 
+
+
+------********************************--------
+Inf : infinity
+
+
+------********************************--------
+LETTERS : 26 letters in alphabet
+
+faithful : two columns of num, data.frame
+
+------********************************--------
+Auto-completion: first several letters, then hit Tab (usually 2 or 3 times)
+
+seq(0, 10, (by = 0.5 OR ,length = **))
+seq_along(my_seq)
+
+rep(c(0,1,2), times = 10 OR ,each = 10)
+
+paste(my_char, collapse = " ")
+paste(1:3, c("X", "Y", "Z"), sep = "")
+
+smaple(c(y, z), 100) y, z are both vectors
+identical(vect1, vect2)
+
+
+dim(vector) <- c(4, 5)
+
+cbind(vector, matrix)
+
+colnames(data)
+
+as.list(data.frame)
+
+range() minimum and maximum 
+
+unique()
+
+str(data.frame)
+
+table(flags$landmass)
+
+object.size(plants)
+
+replicate() create a matrix
+
+colMeans()
+
+rpois() rexp() rchisq() rgamma() 
+
+set.seed()
+
+moment(x, order = 4, TRUE)  DON'T type : 
+center = TRUE, omit "center"
+
+var() variance
+sd() standard deviation
+
+unclass
+
+list.files("directory", full.names = TRUE)
+
+median(data, na.rm = TRUE)
+
+numeric(length(x)) , this gives a numeric vector of zeros whose length is same as x 
+
+grep("partial name", names(data)) : find the 
+position of full name of data
+ 
+grep("^partial name", names(data)) : partial name appears at the Beginning of data names
+
+sort a dataframe by column(s):
+http://stackoverflow.com/questions/1296646/how-to-sort-a-dataframe-by-columns-in-r
+
+format(num, digits = 5, nsmall = 3) : 
+"nsmall" means keep 3 decimals, "digits" means
+total digits at least 5
+
+environment(function)
+
+codetools::findGlobals(function) :
+list all external dependence of a function
+
+lm(y ~ x + I(x^2) + I(x^3))
+or
+lm(y ~ poly(x, 3, raw=TRUE)) :
+regression y on third order polynomial in x
+
+
+waves9
+Riffstation 
+
+
+

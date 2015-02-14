@@ -1,0 +1,49 @@
+git config --global push.default simple 
+
+git config --global http.postBuffer 524288000
+
+(only needed the first time using Git push)
+
+cd /e/'Desktop (important)'/Git-repo
+
+git init (initialize a local Git repository in this directory)
+
+git remote add origin https://github.com/hyqLeonardo/Programming.git
+( 
+  Windows should use following command:
+  git remote set-url origin https:// ...
+  Sometimes this does NOT work, just use the first method.
+)
+
+git clone https://github.com/Username/Repository
+
+cd ./Programming
+
+git add -A  (combine git add .   with   git add -u)
+
+git commit -m "message"
+
+git push
+
+
+Change branch:
+git checkout -b new_branch_name
+(git branch  : show branches avaliable)
+git checkout master (change back to master)
+--------- Some change to git push command ---------
+git push --set-upstream origin newbranch
+
+
+
+Another method:
+
+git remote -v
+
+git remote add upstream https://github.com/Username/Repository
+
+git fetch upstream
+
+git checkout master
+
+git push  (or: git merge upstream/master)
+
